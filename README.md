@@ -96,16 +96,17 @@ Trois mesures, écrites dans `results/` :
 2. **Fidélité des chiffres** : part des explications dont tous les nombres figurent dans les résultats des outils.
 3. **Détection du garde-fou** : on injecte un faux chiffre dans un texte correct, et on mesure la part de faux chiffres repérés.
 
-### Résultats (à remplir avec TA propre exécution)
+### Résultats (graine 0 : 6 branches et 100 assureurs tirés au hasard)
 
 | Indicateur | Valeur |
 |---|---|
-| Triangles évalués / demandés | |
-| Écart relatif moyen | |
-| Écart relatif maximal | |
-| Explications sans chiffre inventé, gabarit | |
-| Explications sans chiffre inventé, Claude | |
-| Faux chiffres injectés détectés | |
+| Triangles évalués / demandés | 52 sur 106 (54 non évaluables, voir Limites) |
+| Écart relatif moyen | 2,97e-16 |
+| Écart relatif maximal | 1,61e-15 |
+| Explications sans chiffre inventé (gabarit, sans LLM) | 6 sur 6 |
+| Faux chiffres injectés détectés par le garde-fou | 6 sur 6 |
+
+Les explications évaluées ici sont celles du gabarit, sans LLM : ce 6 sur 6 est attendu et ne mesure pas un modèle de langage. La mesure avec Claude se lance avec `--explainer claude` et une clé API.
 
 ## CI et Docker
 
